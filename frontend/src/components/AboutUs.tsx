@@ -32,7 +32,7 @@ export function AboutUs() {
                 {/* Main Large Image */}
                 <div className="col-span-2 relative rounded-2xl overflow-hidden shadow-2xl group">
                   <img 
-                    src="/assets/generated/about-us-team.dim_800x600.jpg" 
+                    src="/assets/about-us-team.dim_800x600.jpg" 
                     alt="Professional Team" 
                     className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
                   />

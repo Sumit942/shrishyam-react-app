@@ -39,7 +39,7 @@ export function WhyChooseUs() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/generated/business-partnership.dim_800x600.jpg" 
+          src="/assets/business-partnership.dim_800x600.jpg" 
           alt="Business Partnership" 
           className="w-full h-full object-cover opacity-5"
         />

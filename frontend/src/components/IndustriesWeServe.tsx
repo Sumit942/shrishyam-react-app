@@ -8,32 +8,32 @@ export function IndustriesWeServe() {
     { 
       name: 'E-Commerce', 
       icon: ShoppingCart,
-      image: '/assets/generated/ecommerce-fulfillment.dim_400x300.jpg'
+      image: '/assets/ecommerce-fulfillment.dim_400x300.jpg'
     },
     { 
       name: 'Manufacturing', 
       icon: Factory,
-      image: '/assets/generated/manufacturing-industry.dim_400x300.jpg'
+      image: '/assets/manufacturing-industry.dim_400x300.jpg'
     },
     { 
       name: 'Retail & FMCG', 
       icon: Package,
-      image: '/assets/generated/retail-distribution.dim_400x300.jpg'
+      image: '/assets/retail-distribution.dim_400x300.jpg'
     },
     { 
       name: 'Pharmaceuticals', 
       icon: Pill,
-      image: '/assets/generated/healthcare-logistics.dim_400x300.jpg'
+      image: '/assets/healthcare-logistics.dim_400x300.jpg'
     },
     { 
       name: 'Textiles & Apparel', 
       icon: Shirt,
-      image: '/assets/generated/retail-distribution.dim_400x300.jpg'
+      image: '/assets/retail-distribution.dim_400x300.jpg'
     },
     { 
       name: 'Electronics', 
       icon: Zap,
-      image: '/assets/generated/automotive-logistics.dim_400x300.jpg'
+      image: '/assets/automotive-logistics.dim_400x300.jpg'
     }
   ];
 

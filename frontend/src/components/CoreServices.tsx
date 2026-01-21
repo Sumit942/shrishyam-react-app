@@ -9,26 +9,26 @@ export function CoreServices() {
     {
       title: 'Transportation & Freight',
       description: 'Full Truck Load (FTL) and Part Truck Load (PTL) services for inter-city and intra-city transportation needs.',
-      icon: '/assets/generated/transportation-icon.dim_64x64.png',
-      image: '/assets/generated/freight-transportation.dim_800x600.jpg'
+      icon: '/assets/transportation-icon.dim_64x64.png',
+      image: '/assets/freight-transportation.dim_800x600.jpg'
     },
     {
       title: '3PL Warehousing & Distribution',
       description: 'Comprehensive warehousing solutions with efficient inventory management and distribution services.',
-      icon: '/assets/generated/warehouse-icon.dim_64x64.png',
-      image: '/assets/generated/warehouse-operations.dim_800x600.jpg'
+      icon: '/assets/warehouse-icon.dim_64x64.png',
+      image: '/assets/warehouse-operations.dim_800x600.jpg'
     },
     {
       title: 'Supply Chain Solutions',
       description: 'End-to-end supply chain management designed to optimize your logistics operations and reduce costs.',
-      icon: '/assets/generated/supply-chain-icon.dim_64x64.png',
-      image: '/assets/generated/supply-chain-center.dim_800x600.jpg'
+      icon: '/assets/supply-chain-icon.dim_64x64.png',
+      image: '/assets/supply-chain-center.dim_800x600.jpg'
     },
     {
       title: 'Time-Critical Deliveries',
       description: 'Express delivery services for urgent shipments with guaranteed on-time performance.',
-      icon: '/assets/generated/time-critical-icon.dim_64x64.png',
-      image: '/assets/generated/business-partnership.dim_800x600.jpg'
+      icon: '/assets/time-critical-icon.dim_64x64.png',
+      image: '/assets/business-partnership.dim_800x600.jpg'
     }
   ];
 

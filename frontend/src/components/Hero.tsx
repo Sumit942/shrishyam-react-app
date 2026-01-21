@@ -12,7 +12,7 @@ export function Hero({ onRequestQuote, onContactTeam }: HeroProps) {
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/generated/logistics-hero-enhanced.dim_1920x1080.jpg" 
+          src="/assets/logistics-hero-enhanced.dim_1920x1080.jpg" 
           alt="Logistics Background" 
           className="w-full h-full object-cover"
         />

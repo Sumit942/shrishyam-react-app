@@ -32,7 +32,7 @@ export function CoreServices() {
     }
   ];
 
-  const displayServices = services && services.length > 0 ? services.map((s, i) => ({
+  const displayServices = services && services.length > 2 ? services.map((s, i) => ({
     ...s,
     image: defaultServices[i]?.image || defaultServices[0].image
   })) : defaultServices;

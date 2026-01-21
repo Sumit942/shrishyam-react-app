@@ -10,6 +10,7 @@ import { ContactDialog } from './components/ContactDialog';
 import { useState } from 'react';
 import { Toaster } from '@/components/ui/sonner';
 import { ThemeProvider } from 'next-themes';
+import { VehicleTypes } from './components/VehicleTypes';
 
 function App() {
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
@@ -28,6 +29,7 @@ function App() {
           <Hero onRequestQuote={() => handleOpenDialog('quote')} onContactTeam={() => handleOpenDialog('contact')} />
           <AboutUs />
           <CoreServices />
+          <VehicleTypes />
           <WhyChooseUs />
           <IndustriesWeServe />
           <CallToAction onRequestQuote={() => handleOpenDialog('quote')} />

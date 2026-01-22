@@ -5,37 +5,37 @@ export function VehicleTypes() {
   const vehicles = [
     {
       size: '14ft',
-      image: '/assets/generated/truck-14ft.dim_400x300.jpg',
+      image: '/assets/truck_with_name_on_it_small.jpeg',
       description: 'Available across India – Open and Closed body'
     },
     {
       size: '17ft',
-      image: '/assets/generated/truck-17ft.dim_400x300.jpg',
+      image: '/assets/truck_with_name_on_it_small.jpeg',
       description: 'Available across India – Open and Closed body'
     },
     {
       size: '19ft',
-      image: '/assets/generated/truck-19ft.dim_400x300.jpg',
+      image: '/assets/truck_with_name_on_it_2.jpeg',
       description: 'Available across India – Open and Closed body'
     },
     {
       size: '20ft',
-      image: '/assets/generated/truck-20ft.dim_400x300.jpg',
+      image: '/assets/truck_with_name_on_it_small.jpeg',
       description: 'Available across India – Open and Closed body'
     },
     {
       size: '22ft',
-      image: '/assets/generated/truck-22ft.dim_400x300.jpg',
+      image: '/assets/truck_with_name_on_it_2.jpeg',
       description: 'Available across India – Open and Closed body'
     },
     {
       size: '24ft',
-      image: '/assets/generated/truck-24ft.dim_400x300.jpg',
+      image: '/assets/truck_with_name_on_it.jpeg',
       description: 'Available across India – Open and Closed body'
     },
     {
       size: '32ft',
-      image: '/assets/generated/truck-32ft.dim_400x300.jpg',
+      image: '/assets/truck_with_name_on_it.jpeg',
       description: 'Available across India – Open and Closed body'
     }
   ];

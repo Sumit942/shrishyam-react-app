@@ -63,7 +63,7 @@ A premium professional corporate website for Shri Shyam Trans Logistics, a trans
 - Text: "Looking for a Reliable Logistics Partner?"
 - Contact information with premium styling:
   - Phone numbers: 8432312949 / 9158312949
-  - Email: SSBTS3481@gmail.com
+  - Email: info@shrishyamtranslogistics.in
   - Business hours: "7 AM to 11 PM, Monday to Sunday" with clock icon
   - Full company address with location icon:
     216, Shree Mahavir Plaza
@@ -80,7 +80,7 @@ A premium professional corporate website for Shri Shyam Trans Logistics, a trans
 - Corporate footer with refined styling
 - Contact information including:
   - Phone numbers: 8432312949 / 9158312949
-  - Email: SSBTS3481@gmail.com
+  - Email: info@shrishyamtranslogistics.in
   - Business hours: "7 AM to 11 PM, Monday to Sunday" with clock icon
   - Full company address with location icon:
     216, Shree Mahavir Plaza

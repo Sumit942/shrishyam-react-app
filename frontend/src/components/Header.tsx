@@ -43,14 +43,14 @@ export function Header({ onContactClick }: HeaderProps) {
                 className="h-14 w-14 rounded-full object-contain shadow-md group-hover:shadow-lg transition-shadow"
               />
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden-v2 sm:block">
               <h1 className="text-xl font-bold text-brand-navy leading-tight tracking-tight">Shri Shyam</h1>
               <p className="text-sm font-bold text-brand-orange tracking-wide">TRANS LOGISTICS</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden-v2 md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -72,23 +72,29 @@ export function Header({ onContactClick }: HeaderProps) {
 
           {/* Contact Info & CTA */}
           <div className="flex items-center gap-3">
-            <div className="hidden lg:flex items-center gap-5 mr-4">
+            <div className="hidden-v2 lg:flex items-center gap-5 mr-4">
               <a href="tel:8432312949" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-brand-navy transition-colors group">
                 <div className="p-2 bg-brand-orange/10 rounded-lg group-hover:bg-brand-orange/20 transition-colors">
                   <Phone className="h-4 w-4 text-brand-orange" />
                 </div>
                 <span>8432312949</span>
               </a>
-              <a href="mailto:SSBTS3481@gmail.com" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-brand-navy transition-colors group">
+              <a href="tel:9158312949" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-brand-navy transition-colors group">
+                <div className="p-2 bg-brand-orange/10 rounded-lg group-hover:bg-brand-orange/20 transition-colors">
+                  <Phone className="h-4 w-4 text-brand-orange" />
+                </div>
+                <span>9158312949</span>
+              </a>
+              <a href={`mailto:${import.meta.env.VITE_SUPPORT_EMAILID}`} className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-brand-navy transition-colors group">
                 <div className="p-2 bg-brand-orange/10 rounded-lg group-hover:bg-brand-orange/20 transition-colors">
                   <Mail className="h-4 w-4 text-brand-orange" />
                 </div>
-                <span className="hidden xl:inline">SSBTS3481@gmail.com</span>
+                <span className="hidden-v2 xl:inline">{import.meta.env.VITE_SUPPORT_EMAILID}</span>
               </a>
             </div>
             <Button 
               onClick={onContactClick} 
-              className="hidden md:inline-flex bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              className="hidden-v2 md:inline-flex bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               Get Quote
             </Button>
@@ -135,9 +141,13 @@ export function Header({ onContactClick }: HeaderProps) {
                       <Phone className="h-4 w-4 text-brand-orange" />
                       <span>8432312949</span>
                     </a>
-                    <a href="mailto:SSBTS3481@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <a href="tel:9158312949" className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Phone className="h-4 w-4 text-brand-orange" />
+                      <span>9158312949</span>
+                    </a>
+                    <a href={`mailto:${import.meta.env.VITE_SUPPORT_EMAILID}`} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Mail className="h-4 w-4 text-brand-orange" />
-                      <span>SSBTS3481@gmail.com</span>
+                      <span>{import.meta.env.VITE_SUPPORT_EMAILID}</span>
                     </a>
                   </div>
                   <Button onClick={onContactClick} className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold">

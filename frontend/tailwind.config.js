@@ -108,6 +108,15 @@ export default {
             }
         }
     },
-    plugins: [animate]
+    plugins: [
+        animate,
+        plugin(function ({ addUtilities }) {
+            addUtilities({
+                '.hidden-v2' : {
+                    display: 'none'
+                }
+            })
+        })
+    ]
 };
 

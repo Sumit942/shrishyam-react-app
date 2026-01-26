@@ -63,8 +63,8 @@ export function CallToAction({ onRequestQuote }: CallToActionProps) {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-white mb-3">Email Us</h3>
-                  <a href="mailto:SSBTS3481@gmail.com" className="block text-xl font-bold text-white/90 hover:text-brand-orange transition-colors break-all">
-                    SSBTS3481@gmail.com
+                  <a href={`mailto:${import.meta.env.VITE_SUPPORT_EMAILID}`} className="block text-xl font-bold text-white/90 hover:text-brand-orange transition-colors break-all">
+                    {import.meta.env.VITE_SUPPORT_EMAILID}
                   </a>
                 </div>
               </div>

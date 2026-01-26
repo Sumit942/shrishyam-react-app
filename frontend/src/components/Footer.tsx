@@ -96,8 +96,8 @@ export function Footer() {
                 <div className="p-2 bg-brand-orange/20 rounded-lg group-hover:bg-brand-orange transition-colors">
                   <Mail className="h-5 w-5 text-brand-orange group-hover:text-white transition-colors flex-shrink-0" />
                 </div>
-                <a href="mailto:SSBTS3481@gmail.com" className="hover:text-brand-orange transition-colors break-all font-medium">
-                  SSBTS3481@gmail.com
+                <a href={`mailto:${import.meta.env.VITE_SUPPORT_EMAILID}`} className="hover:text-brand-orange transition-colors break-all font-medium">
+                  {import.meta.env.VITE_SUPPORT_EMAILID}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-base text-white/80 group">
@@ -143,16 +143,16 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              <a href="#" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
+              <a href="https://www.facebook.com/profile.php?id=61587295042621" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
                 <SiFacebook className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
+              {/* <a href="#" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
                 <SiX className="h-5 w-5" />
-              </a>
-              <a href="#" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
+              </a> */}
+              <a href="https://www.linkedin.com/in/shri-shyam-trans-logistics-4744433a8" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
                 <SiLinkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
+              <a href="https://www.instagram.com/shrishyamtranslogistics?igsh=MWNhMTJmdGhrMG42OQ==" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-lg text-white/70 hover:text-white hover:bg-brand-orange transition-all">
                 <SiInstagram className="h-5 w-5" />
               </a>
             </div>

@@ -4,10 +4,12 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Loader2 } from 'lucide-react';
 import { useSubmitContactForm } from '@/hooks/useQueries';
 import { toast } from 'sonner';
+import { ReCAPTCHA } from 'react-google-recaptcha';
+import { checkRateLimit, recordSubmission, formatTimeRemaining } from '@/lib/rateLimit';
 
 interface ContactDialogProps {
   open: boolean;
@@ -21,16 +23,41 @@ export function ContactDialog({ open, onOpenChange, type }: ContactDialogProps) 
     email: '',
     phone: '',
     message: '',
-    serviceInterested: ''
+    serviceInterested: '',
+    title: ''
   });
+
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const submitMutation = useSubmitContactForm();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
+    // Check rate limit
+    const rateLimitCheck = checkRateLimit();
+    if (!rateLimitCheck.allowed) {
+      toast.error(`Too many submissions. Please wait ${formatTimeRemaining(rateLimitCheck.remainingTime!)} before submitting again.`);
+      return;
+    }
+
+    // Check CAPTCHA
+    if (!captchaToken) {
+      toast.error('Please complete the CAPTCHA verification.');
+      return;
+    }
+
     try {
-      await submitMutation.mutateAsync(formData);
+      formData.title = type === 'quote' ? 'Quote Request' : 'Contact Request';
+      await submitMutation.mutateAsync({
+        ...formData,
+        captchaToken
+      });
+
+      // Record successful submission for rate limiting
+      recordSubmission();
+
       toast.success('Thank you! We will contact you soon.');
       onOpenChange(false);
       setFormData({
@@ -38,8 +65,13 @@ export function ContactDialog({ open, onOpenChange, type }: ContactDialogProps) 
         email: '',
         phone: '',
         message: '',
-        serviceInterested: ''
+        serviceInterested: '',
+        title: ''
       });
+
+      // Reset CAPTCHA
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
     } catch (error) {
       toast.error('Failed to submit form. Please try again.');
     }
@@ -128,6 +160,17 @@ export function ContactDialog({ open, onOpenChange, type }: ContactDialogProps) 
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               required
+            />
+          </div>
+
+          {/* CAPTCHA */}
+          <div className="space-y-2">
+            <Label>Security Verification *</Label>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_RECAPTCHA_SITE_KEY"} // Use env var or fallback
+              onChange={(token) => setCaptchaToken(token)}
+              onExpired={() => setCaptchaToken(null)}
             />
           </div>
 

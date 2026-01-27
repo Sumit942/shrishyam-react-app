@@ -8,7 +8,7 @@ import { useState, useRef } from 'react';
 import { Loader2 } from 'lucide-react';
 import { useSubmitContactForm } from '@/hooks/useQueries';
 import { toast } from 'sonner';
-import { ReCAPTCHA } from 'react-google-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { checkRateLimit, recordSubmission, formatTimeRemaining } from '@/lib/rateLimit';
 
 interface ContactDialogProps {
@@ -171,6 +171,7 @@ export function ContactDialog({ open, onOpenChange, type }: ContactDialogProps) 
               sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_RECAPTCHA_SITE_KEY"} // Use env var or fallback
               onChange={(token) => setCaptchaToken(token)}
               onExpired={() => setCaptchaToken(null)}
+              size="normal"
             />
           </div>
 
